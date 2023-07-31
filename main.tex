@@ -1,0 +1,46 @@
+\input{~/Templates/preamble.tex}
+\usepackage{lipsum}
+
+\title{Inyeccion SQL}
+\author{Abarca Godoy Alvaro}
+\def\grupo{4NV40}
+\def\asignatura{Administracion de Bases de Datos}
+\def\docente{Docente}
+\def\fechaEntrega{Fecha de Entrega}
+
+
+
+\begin{document}
+\input{portada/portada.tex}
+
+\tableofcontents
+
+\newpage
+
+
+  \section{Prueba}
+
+   \[
+     x^3 + 4x -4cos(20) + sen(10) \sqrt{2x+65}
+   \] 
+
+
+
+   \begin{gather*}
+    \iint_V \mu(u,v) \,du\,dv
+\\
+    \iiint_V \mu(u,v,w) \,du\,dv\,dw
+\\
+    \iiiint_V \mu(t,u,v,w) \,dt\,du\,dv\,dw
+\\
+    \idotsint_V \mu(u_1,\dots,u_k) \,du_1 \dots du_k
+\end{gather*}
+   \lipsum{1-20}
+
+   \section{Otra Prueba}
+    \lipsum{1-30}
+
+  \newpage
+  Mismo Script pero Minted
+   \inputminted[bgcolor=backcolour, fontsize=\scriptsize]{python}{/home/abargdev/Scripts/document.py}
+\end{document} 

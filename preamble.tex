@@ -1,0 +1,93 @@
+\documentclass[letterpaper,oneside, 12pt]{article}
+\usepackage[
+  top=0.5in, 
+  left=1in, 
+  right=1in, 
+  bottom=1in, 
+  includefoot]{geometry}
+\usepackage{url}
+%\usepackage[sfdefault,book]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+\usepackage{tgpagella}
+\usepackage{unicode-math}
+\setmathfont{Tex Gyre Pagella Math}
+%\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{tocloft}
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+\usepackage{comment}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{bookmark}
+\usepackage{listings}
+\urlstyle{same}
+\hypersetup{
+   colorlinks=true,
+   urlcolor=cyan,
+   linkcolor=black,
+   citecolor=black,
+   filecolor=magenta,
+   pdfpagemode=FullScreen,
+}
+%Header
+\newcommand{\crule}[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
+\usepackage{xcolor}
+\definecolor{verdeUpiicsa}{RGB}{0,132,61}
+\definecolor{amarilloUpiicsa}{RGB}{255,215,0}
+\usepackage{fancyhdr}
+\setlength{\headheight}{2cm}
+\pagestyle{fancy}
+\rhead{\footnotesize\grupo}
+\chead{\footnotesize\theauthor}
+\lhead{\raisebox{-0.5\height}{\includegraphics[height=10mm]{upiicsa}}}
+\renewcommand{\headrulewidth}{1.5pt}
+\let\oldheadrule\headrule
+\renewcommand{\headrule}{\color{verdeUpiicsa}\oldheadrule}
+
+%Footer
+\usepackage{etoolbox}
+\cfoot{\footnotesize\thetitle}
+\rfoot{\footnotesize\thepage}
+\lfoot{\footnotesize\asignatura}
+\renewcommand{\footrulewidth}{1.5pt}
+\let\oldfootrule\footrule
+%\renewcommand{\footrule}{\color{verdeUpiicsa}\oldfootrule}
+\patchcmd{\footrule}{\hrule}{\color{verdeUpiicsa}\hrule}{}{}
+
+%paragraph
+\raggedright
+\setlength{\parindent}{0.5in}
+%\setlength{\parskip}{1em}
+\linespread{1.25}
+
+%Code blocks
+\usepackage{minted}
+\usemintedstyle{friendly}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{gray}{0.95}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
